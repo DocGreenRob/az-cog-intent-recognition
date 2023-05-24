@@ -26,6 +26,16 @@ This repository contains sample code demonstrating the usage of Azure Cognitive 
 
 These variables should correspond to your Azure Cognitive Services instance.
 
+4. Update your Azure Language **Project Name** `OpenCS`and **Model Deployment** `OpenCS.Deploy4`
+
+```
+var intentRecgonitionContinuous = new IntentRecognition_Continuous2(speechKey,
+                                                                            speechRegion,
+                                                                            languageKey,
+                                                                            languageEndpoint,
+                                                                            "OpenCS",
+                                                                            "OpenCS.Deploy4");
+ ```
 ## Run
 
 1. Use the `cd` command to navigate into the root directory of the project.
