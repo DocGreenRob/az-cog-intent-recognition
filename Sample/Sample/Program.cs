@@ -36,6 +36,6 @@ class Program
                                                                             languageEndpoint,
                                                                             "OpenCS",
                                                                             "OpenCS.Deploy4");
-        await intentRecgonitionContinuous.DoWork();
+        await intentRecgonitionContinuous.ContinuousRecognitionWithFileAsync();
     }
 }
