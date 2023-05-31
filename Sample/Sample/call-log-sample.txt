@@ -1,0 +1,117 @@
+﻿
+    Session started event.
+RECOGNIZING: Text=hey
+RECOGNIZING: Text=hey so
+RECOGNIZING: Text=hey so i
+RECOGNIZING: Text=hey so i want to see
+RECOGNIZING: Text=hey so i wanna see if this
+RECOGNIZING: Text=hey so i wanna see if this thing is
+RECOGNIZING: Text=hey so i wanna see if this thing is working
+RECOGNIZED: Text=Hey so I wanna see if this thing is working.
+    Intent Id: FamilyFinances.
+    Language Understanding JSON: {"kind":"ConversationResult","result":{"query":"hey so i wanna see if this thing is working","prediction":{"topIntent":"FamilyFinances","projectKind":"Conversation","intents":[{"category":"FamilyFinances","confidenceScore":0.6159865},{"category":"RetirementPlanning","confidenceScore":0.48220846},{"category":"FinancialProtection","confidenceScore":0.46357283},{"category":"None","confidenceScore":0}],"entities":[]}}}.
+RECOGNIZING: Text=and
+RECOGNIZED: Text=And dumb.
+    Intent Id: FamilyFinances.
+    Language Understanding JSON: {"kind":"ConversationResult","result":{"query":"and dumb","prediction":{"topIntent":"FamilyFinances","projectKind":"Conversation","intents":[{"category":"FamilyFinances","confidenceScore":0.59829706},{"category":"RetirementPlanning","confidenceScore":0.5352483},{"category":"FinancialProtection","confidenceScore":0.43988082},{"category":"None","confidenceScore":0}],"entities":[]}}}.
+RECOGNIZING: Text=i
+RECOGNIZING: Text=i want to
+RECOGNIZING: Text=i want to know
+RECOGNIZED: Text=I want to know.
+    Intent Id: RetirementPlanning.
+    Language Understanding JSON: {"kind":"ConversationResult","result":{"query":"i want to know","prediction":{"topIntent":"RetirementPlanning","projectKind":"Conversation","intents":[{"category":"RetirementPlanning","confidenceScore":0.6082082},{"category":"FamilyFinances","confidenceScore":0.5719175},{"category":"FinancialProtection","confidenceScore":0.44817993},{"category":"None","confidenceScore":0}],"entities":[]}}}.
+RECOGNIZING: Text=if
+RECOGNIZING: Text=if my
+RECOGNIZING: Text=if my family
+RECOGNIZING: Text=if my family financially
+RECOGNIZING: Text=if my family financial
+RECOGNIZING: Text=if my family financial future
+RECOGNIZED: Text=If my family financial future.
+    Intent Id: FamilyFinances.
+    Language Understanding JSON: {"kind":"ConversationResult","result":{"query":"if my family financial future","prediction":{"topIntent":"FamilyFinances","projectKind":"Conversation","intents":[{"category":"FamilyFinances","confidenceScore":0.8844396},{"category":"RetirementPlanning","confidenceScore":0.668746},{"category":"FinancialProtection","confidenceScore":0.50722677},{"category":"None","confidenceScore":0}],"entities":[{"category":"Product.MetLifeFamilyProtectionPlus","text":"family financial future","offset":6,"length":23,"confidenceScore":1}]}}}.
+RECOGNIZING: Text=family
+RECOGNIZING: Text=family fun
+RECOGNIZING: Text=family
+RECOGNIZING: Text=family financial
+RECOGNIZING: Text=family financial future
+RECOGNIZING: Text=family financial future looks
+RECOGNIZING: Text=family financial future looks good
+RECOGNIZED: Text=Family financial future looks good.
+    Intent Id: FamilyFinances.
+    Language Understanding JSON: {"kind":"ConversationResult","result":{"query":"family financial future looks good","prediction":{"topIntent":"FamilyFinances","projectKind":"Conversation","intents":[{"category":"FamilyFinances","confidenceScore":0.916534},{"category":"RetirementPlanning","confidenceScore":0.7281031},{"category":"FinancialProtection","confidenceScore":0.6350651},{"category":"None","confidenceScore":0}],"entities":[{"category":"Product.MetLifeFamilyProtectionPlus","text":"family financial future","offset":0,"length":23,"confidenceScore":1}]}}}.
+RECOGNIZING: Text=and i
+RECOGNIZING: Text=and i was having
+RECOGNIZING: Text=and i was having a
+RECOGNIZING: Text=and i was having a conversation
+RECOGNIZING: Text=and i was having a conversation today
+RECOGNIZING: Text=and i was having a conversation today and i
+RECOGNIZING: Text=and i was having a conversation today and i was
+RECOGNIZING: Text=and i was having a conversation today and i was wondering
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about things
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about things and
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about things and i
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about things and i really
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about things and i really didn't know
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about things and i really didn't know about
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about things and i really didn't know about the
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about things and i really didn't know about the cost
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about things and i really didn't know about the cost for
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about things and i really didn't know about the cost for the
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about things and i really didn't know about the cost for the service
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about things and i really didn't know about the cost for the service and
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about things and i really didn't know about the cost for the service and how
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about things and i really didn't know about the cost for the service and how much it
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about things and i really didn't know about the cost for the service and how much it will cost
+RECOGNIZING: Text=and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about things and i really didn't know about the cost for the service and how much it will cost but
+RECOGNIZED: Text=And I was having a conversation today and I was wondering about certain situations and certain solutions and I was just kind of thinking about things and I really didn't know about the cost for the service and how much it will cost, but.
+    Intent Id: FamilyFinances.
+    Language Understanding JSON: {"kind":"ConversationResult","result":{"query":"and i was having a conversation today and i was wondering about certain situations and certain solutions and i was just kind of thinking about things and i really didn't know about the cost for the service and how much it will cost but","prediction":{"topIntent":"FamilyFinances","projectKind":"Conversation","intents":[{"category":"FamilyFinances","confidenceScore":0.6318575},{"category":"RetirementPlanning","confidenceScore":0.48824498},{"category":"FinancialProtection","confidenceScore":0.48776224},{"category":"None","confidenceScore":0}],"entities":[]}}}.
+RECOGNIZING: Text=bye
+RECOGNIZING: Text=by his word
+RECOGNIZING: Text=buy kids were
+RECOGNIZING: Text=buy kids were wondering
+RECOGNIZING: Text=buy kids were wondering about
+RECOGNIZING: Text=buy kids were wondering about my
+RECOGNIZING: Text=buy kids were wondering about my family
+RECOGNIZING: Text=buy kids were wondering about my family financially
+RECOGNIZING: Text=buy kids were wondering about my family financial
+RECOGNIZING: Text=buy kids were wondering about my family financial future
+RECOGNIZED: Text=Buy kids were wondering about my family financial future.
+    Intent Id: FamilyFinances.
+    Language Understanding JSON: {"kind":"ConversationResult","result":{"query":"buy kids were wondering about my family financial future","prediction":{"topIntent":"FamilyFinances","projectKind":"Conversation","intents":[{"category":"FamilyFinances","confidenceScore":0.8940534},{"category":"RetirementPlanning","confidenceScore":0.70312613},{"category":"FinancialProtection","confidenceScore":0.5534719},{"category":"None","confidenceScore":0}],"entities":[]}}}.
+RECOGNIZING: Text=and
+RECOGNIZED: Text=And.
+    Intent Id: RetirementPlanning.
+    Language Understanding JSON: {"kind":"ConversationResult","result":{"query":"and","prediction":{"topIntent":"RetirementPlanning","projectKind":"Conversation","intents":[{"category":"RetirementPlanning","confidenceScore":0.59323347},{"category":"FamilyFinances","confidenceScore":0.5870814},{"category":"FinancialProtection","confidenceScore":0.42829025},{"category":"None","confidenceScore":0}],"entities":[]}}}.
+RECOGNIZING: Text=it
+RECOGNIZING: Text=it really
+RECOGNIZING: Text=it really made
+RECOGNIZING: Text=it really made me
+RECOGNIZING: Text=it really made me sad
+RECOGNIZING: Text=it really made me sad to think
+RECOGNIZING: Text=it really made me sad to think about
+RECOGNIZED: Text=It really made me sad to think about.
+    Intent Id: FamilyFinances.
+    Language Understanding JSON: {"kind":"ConversationResult","result":{"query":"it really made me sad to think about","prediction":{"topIntent":"FamilyFinances","projectKind":"Conversation","intents":[{"category":"FamilyFinances","confidenceScore":0.7038208},{"category":"RetirementPlanning","confidenceScore":0.5475985},{"category":"FinancialProtection","confidenceScore":0.49784887},{"category":"None","confidenceScore":0}],"entities":[]}}}.
+RECOGNIZING: Text=the
+RECOGNIZING: Text=the family
+RECOGNIZING: Text=the family financial
+RECOGNIZING: Text=the family financial future
+RECOGNIZED: Text=The family financial future?
+    Intent Id: FamilyFinances.
+    Language Understanding JSON: {"kind":"ConversationResult","result":{"query":"the family financial future","prediction":{"topIntent":"FamilyFinances","projectKind":"Conversation","intents":[{"category":"FamilyFinances","confidenceScore":0.946402},{"category":"RetirementPlanning","confidenceScore":0.666492},{"category":"FinancialProtection","confidenceScore":0.52977717},{"category":"None","confidenceScore":0}],"entities":[{"category":"Product.MetLifeFamilyProtectionPlus","text":"family financial future","offset":4,"length":23,"confidenceScore":1}]}}}.
+NOMATCH: Speech could not be recognized.
+NOMATCH: Speech could not be recognized.

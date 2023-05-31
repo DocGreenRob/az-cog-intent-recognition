@@ -132,4 +132,110 @@ public class IntentRecognition_Continuous2
 
         }
     }
+
+    /// <summary>
+    /// Continuous intent recognition using file input. 
+    /// </summary>
+    public async Task ContinuousRecognitionWithFileAsync()
+    {
+        // <intentContinuousRecognitionWithFile>
+        // Creates an instance of a speech config with specified subscription key
+        // and service region. Note that in contrast to other services supported by
+        // the Cognitive Services Speech SDK, the Language Understanding service
+        // requires a specific subscription key from https://www.luis.ai/.
+        // The Language Understanding service calls the required key 'endpoint key'.
+        // Once you've obtained it, replace with below with your own Language Understanding subscription key
+        // and service region (e.g., "westus").
+        var config = SpeechConfig.FromSubscription(_speechKey, _speechRegion);
+
+        // Creates an intent recognizer using file as audio input.
+        // Replace with your own audio file name.
+        using (var audioInput = AudioConfig.FromDefaultMicrophoneInput())
+        {
+            using (var recognizer = new IntentRecognizer(config, audioInput))
+            {
+                // The TaskCompletionSource to stop recognition.
+                var stopRecognition = new TaskCompletionSource<int>(TaskCreationOptions.RunContinuationsAsynchronously);
+
+                // Creates a Language Understanding model using the app id, and adds specific intents from your model
+                //var model = LanguageUnderstandingModel.FromAppId("YourLanguageUnderstandingAppId");
+                //recognizer.AddIntent(model, "YourLanguageUnderstandingIntentName1", "id1");
+                //recognizer.AddIntent(model, "YourLanguageUnderstandingIntentName2", "id2");
+                //recognizer.AddIntent(model, "YourLanguageUnderstandingIntentName3", "any-IntentId-here");
+
+                var cluModel = new ConversationalLanguageUnderstandingModel(
+                                                                        _languageKey,
+                                                                        _languageEndpoint,
+                                                                        _cluProjectName,
+                                                                        _cluDeploymentName);
+                var collection = new LanguageUnderstandingModelCollection();
+                collection.Add(cluModel);
+
+                recognizer.ApplyLanguageModels(collection);
+
+                Console.WriteLine("Begin conversation...");
+
+                // Subscribes to events.
+                recognizer.Recognizing += (s, e) =>
+                {
+                    Console.WriteLine($"RECOGNIZING: Text={e.Result.Text}");
+                };
+
+                recognizer.Recognized += (s, e) =>
+                {
+                    if (e.Result.Reason == ResultReason.RecognizedIntent)
+                    {
+                        Console.WriteLine($"RECOGNIZED: Text={e.Result.Text}");
+                        Console.WriteLine($"    Intent Id: {e.Result.IntentId}.");
+                        Console.WriteLine($"    Language Understanding JSON: {e.Result.Properties.GetProperty(PropertyId.LanguageUnderstandingServiceResponse_JsonResult)}.");
+                    }
+                    else if (e.Result.Reason == ResultReason.RecognizedSpeech)
+                    {
+                        Console.WriteLine($"RECOGNIZED: Text={e.Result.Text}");
+                        Console.WriteLine($"    Intent not recognized.");
+                    }
+                    else if (e.Result.Reason == ResultReason.NoMatch)
+                    {
+                        Console.WriteLine($"NOMATCH: Speech could not be recognized.");
+                    }
+                };
+
+                recognizer.Canceled += (s, e) =>
+                {
+                    Console.WriteLine($"CANCELED: Reason={e.Reason}");
+                    if (e.Reason == CancellationReason.Error)
+                    {
+                        Console.WriteLine($"CANCELED: ErrorCode={e.ErrorCode}");
+                        Console.WriteLine($"CANCELED: ErrorDetails={e.ErrorDetails}");
+                        Console.WriteLine($"CANCELED: Did you update the subscription info?");
+                    }
+                    stopRecognition.TrySetResult(0);
+                };
+
+                recognizer.SessionStarted += (s, e) =>
+                {
+                    Console.WriteLine("\n    Session started event.");
+                };
+
+                recognizer.SessionStopped += (s, e) =>
+                {
+                    Console.WriteLine("\n    Session stopped event.");
+                    Console.WriteLine("\nStop recognition.");
+                    stopRecognition.TrySetResult(0);
+                };
+
+
+                // Starts continuous recognition. Uses StopContinuousRecognitionAsync() to stop recognition.
+                await recognizer.StartContinuousRecognitionAsync().ConfigureAwait(false);
+
+                // Waits for completion.
+                // Use Task.WaitAny to keep the task rooted.
+                Task.WaitAny(new[] { stopRecognition.Task });
+
+                // Stops recognition.
+                await recognizer.StopContinuousRecognitionAsync().ConfigureAwait(false);
+            }
+        }
+        // </intentContinuousRecognitionWithFile>
+    }
 }
